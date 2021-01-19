@@ -14,10 +14,10 @@
             <tbody>
 
                 <?php 
-                $i=1;
+                
                 foreach($peoples as $data): ?>
                 <tr>
-                <th scope="row"><?=$i++;?></th>
+                <th scope="row"><?=++$start;?></th>
                 <td><?=$data['nama'];?></td>
                 <td><?=$data['alamat'];?></td>
                 <td><?=$data['email'];?></td>
@@ -30,6 +30,7 @@
                 <?php endforeach; ?>
             </tbody>
             </table>
+           <?php echo $this->pagination->create_links(); ?>
         </div>
     </div>
 </div>
