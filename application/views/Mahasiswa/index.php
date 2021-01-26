@@ -26,6 +26,7 @@
             <strong>sukses!!</strong> data <?php echo $this->session->flashdata('flash');?>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
+        //tes 
         <?php $this->session->sess_destroy(); ?> -->
      <?php endif; ?>
     </div>
