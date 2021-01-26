@@ -31,13 +31,13 @@
                 $this->load->view('templates/footer');
             }else{
                 $this->Mahasiswa_model->tambah_data();
-                $this->session->set_flashdata('flash',"berhasil");
+                $this->session->set_flashdata('flash',"berhasil ditambahkan");
                 redirect('Mahasiswa');
             }
         }
         public function delateDataMahasiswa($id){
             $this->Mahasiswa_model->hapus_data($id);
-            $this->session->set_flashdata('flash',"berhasil");
+            $this->session->set_flashdata('flash',"berhasil dihapus");
             redirect('Mahasiswa');
         }
         public function detailDataMahasiswa($id){
@@ -60,7 +60,7 @@
                 $this->load->view('templates/footer');
             }else{
                 $this->Mahasiswa_model->Update_data($id);
-                $this->session->set_flashdata('flash',"berhasil");
+                $this->session->set_flashdata('flash',"berhasil diupdate");
                 redirect('Mahasiswa');
             }
         }

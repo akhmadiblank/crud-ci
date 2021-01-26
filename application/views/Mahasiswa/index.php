@@ -20,12 +20,13 @@
 
   
     <div class="row">
+    <div class="flash-data" data-flashdata="<?=$this->session->flashdata('flash');?>"></div>
     <?php if($this->session->flashdata()): ?>
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
             <strong>sukses!!</strong> data <?php echo $this->session->flashdata('flash');?>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
-        <?php $this->session->sess_destroy(); ?>
+        <?php $this->session->sess_destroy(); ?> -->
      <?php endif; ?>
     </div>
     
@@ -33,7 +34,7 @@
         <ul class="list-group">
         <?php foreach ($mahasiswa as $mhs): ?>
         <li class="list-group-item"><?=$mhs['nama'] ?>
-        <a href="<?= base_url(); ?>mahasiswa/delateDataMahasiswa/<?=$mhs['id']?>" class="badge bg-danger float-end" onclick="return confirm('yakin?');">Hapus</a>
+        <a href="<?= base_url(); ?>mahasiswa/delateDataMahasiswa/<?=$mhs['id']?>" class="badge bg-danger float-end tombol-hapus" >Hapus</a>
         <a href="<?= base_url(); ?>mahasiswa/UpdateDataMahasiswa/<?=$mhs['id']?>" class="badge bg-success float-end">Update</a>
         <a href="<?= base_url(); ?>mahasiswa/detailDataMahasiswa/<?=$mhs['id']?>" class="badge bg-primary float-end">Detail</a>
         </li>
